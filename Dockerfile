@@ -12,7 +12,7 @@ RUN gradle dependencies --no-daemon || true
 COPY src ./src
 
 # --no-daemon: 컨테이너 내 일회성 빌드이므로 데몬 불필요
-RUN gradle build --no-daemon -x test
+RUN gradle build --no-daemon
 
 # =========================
 # 2️⃣ Run Stage
