@@ -1,9 +1,11 @@
 package com.back.back2
 
+import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
 import software.amazon.awssdk.services.s3.S3Client
 
 @Service
+@Profile("!test")
 class S3ServiceImpl(
     private val s3Client: S3Client
 ) : S3Service {
